@@ -4,6 +4,7 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const cors = require('cors')
 const Cars = require('./models/cars')
+const port = process.env.PORT | 4000
 
 //parse data
 app.use(express.json())
@@ -56,7 +57,7 @@ app.post('/api/onload', async (req, res) => {
 
 
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log('Server is listening on port 4000')
 })
 
